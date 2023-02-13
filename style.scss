@@ -70,6 +70,7 @@ input{
 }
 
 body{
+    
     background: 
                 url(../images/bg-top.svg) right top no-repeat,
                 url(../images/bg-bottom.svg) left bottom no-repeat;
@@ -78,9 +79,14 @@ body{
     font-family: $ff-main;
     font-size: 15px;
     display: flex;
+    justify-content: center;
     flex-direction: column;
     gap: 2em;
     align-items: center;
+
+    @media(min-width:957px) {
+        height: 100vh;
+    }
 }
 
 header{
