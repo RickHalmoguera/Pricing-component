@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap');
+
+$ff-main: 'Montserrat', sans-serif;
+
+$veryLightGaryishBlue: hsl(240, 78%, 98%);
+$LightGrayishBlue: hsl(234, 14%, 74%);
+$grayishBlue: hsl(237, 73%, 79%);
+$darkGrayishBlue: hsl(238, 63%, 64%);
+$white: #fff;
+
+@mixin btn{
+    border: none;
+    border-radius: 10px;
+    padding: 1em;
+    text-transform: uppercase;
+    font-family: $ff-main;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+header{
+    text-align: center;
+}
+
+.checkbox-container{
+    display: flex;
+    align-items: center;
+    gap: .5EM;
+}
+
+
+input{
+
+    position: relative;
+    appearance: none; 
+    outline: none;
+    width: 50px; height: 30px;
+    background-color: #ffffff; 
+    border: 1px solid $grayishBlue;
+    border-radius: 50px; 
+    box-shadow: inset -20px 0 0 0 $grayishBlue;
+    transition-duration: 100ms;
+
+        &::after{
+        content: "";
+        position: absolute;
+        top: 50%; 
+        left: 2px;
+        transform: translateY(-50%);
+        width: 26px; 
+        height: 26px;
+        background-color: transparent;
+       
+        }
+
+        &:checked{
+
+        border-color:$grayishBlue;
+        box-shadow: inset 20px 0 0 0 $grayishBlue;
+        }
+
+        &:checked::after{
+        left: 20px;
+        }
+
+}
+
+body{
+    background: 
+                url(../images/bg-top.svg) right top no-repeat,
+                url(../images/bg-bottom.svg) left bottom no-repeat;
+    background-color: $veryLightGaryishBlue;
+    padding: 2em;
+    font-family: $ff-main;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    align-items: center;
+}
+
+header{
+    span{
+        font-weight: 300;
+    }
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+
+    @media (min-width:957px) {
+        flex-direction: row;
+        align-items: center;
+        gap:0;
+        
+    }
+
+    .card{
+        min-height: 453px;
+        max-width: 350px;
+        background: $white;
+        padding: 2em;
+        border-radius: 30px;
+        text-align: center;
+        font-weight: 700;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        
+        .card-price{
+            font-size: 4.8rem;
+        }
+
+        .btn-main{
+            @include btn();
+            background: linear-gradient(to bottom right, $grayishBlue ,$darkGrayishBlue);
+            color: $white;
+
+        }   
+    }
+
+    .highlight{
+        background: linear-gradient(to bottom right, $grayishBlue ,$darkGrayishBlue);
+        color: $white;
+
+        @media (min-width:957px) {
+            height: 501px;
+            
+        }
+
+        .btn-sec{
+            @include btn();
+            background: $white;
+            color: $darkGrayishBlue;
+        }
+    }
+}
