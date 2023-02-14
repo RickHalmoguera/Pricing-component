@@ -76,7 +76,7 @@ checkbox.addEventListener("change", changePrice)
 
 ### Useful resources
 
-- [onchange Event](https://www.w3schools.com/jsref/event_onchange.asp) - This helped me to use the EventListener of CHANGE
+- [Onchange Event](https://www.w3schools.com/jsref/event_onchange.asp) - This helped me to use the EventListener of CHANGE
 
 ## Author
 
