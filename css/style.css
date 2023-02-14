@@ -81,8 +81,8 @@ main {
   }
 }
 main .card {
-  min-height: 453px;
-  max-width: 350px;
+  height: 453px;
+  width: 350px;
   background: #fff;
   padding: 2em;
   border-radius: 30px;
@@ -90,7 +90,7 @@ main .card {
   font-weight: 700;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 1.3em;
 }
 main .card .card-price {
   font-size: 4.8rem;
@@ -106,6 +106,14 @@ main .card .btn-main {
   background: linear-gradient(to bottom right, hsl(237deg, 73%, 79%), hsl(238deg, 63%, 64%));
   color: #fff;
 }
+main .card .btn-main:hover {
+  cursor: pointer;
+}
+main .card .btn-main:hover {
+  background: #fff;
+  color: hsl(238deg, 63%, 64%);
+  border: 1px solid hsl(238deg, 63%, 64%);
+}
 main .highlight {
   background: linear-gradient(to bottom right, hsl(237deg, 73%, 79%), hsl(238deg, 63%, 64%));
   color: #fff;
@@ -113,6 +121,7 @@ main .highlight {
 @media (min-width: 957px) {
   main .highlight {
     height: 501px;
+    gap: 1.51em;
   }
 }
 main .highlight .btn-sec {
@@ -125,4 +134,12 @@ main .highlight .btn-sec {
   letter-spacing: 2px;
   background: #fff;
   color: hsl(238deg, 63%, 64%);
+}
+main .highlight .btn-sec:hover {
+  cursor: pointer;
+}
+main .highlight .btn-sec:hover {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
 }/*# sourceMappingURL=style.css.map */

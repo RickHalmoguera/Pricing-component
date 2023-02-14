@@ -14,7 +14,7 @@
         <h1>Our Pricing</h1>
         <div class="checkbox-container">
             <span>Annually</span>
-            <input type="checkbox" name="billing" id="billing">
+            <input type="checkbox" name="billing" id="checkbox" checked>
             <span>Monthly</span>
         </div>
     </header>
@@ -22,7 +22,7 @@
     <main>
         <div class="card">
             <p>Basic</p>
-            <span class="card-price">$19.99</span>
+            <span class="card-price" id="basicDisplay">$19.99</span>
             <hr>
             <p>500 GB Storage</p>
             <hr>
@@ -30,12 +30,12 @@
             <hr>
             <p>Send up to 3 GB</p>
             <hr>
-            <button class="btn-main">learn more</button>
+            <button class="btn-main" >learn more</button>
         </div>
 
         <div class="card highlight">
             <p>Professional</p>
-            <span class="card-price">$24.99</span>
+            <span class="card-price" id="proDisplay">$24.99</span>
             <hr>
             <p>1 TB Storage</p>
             <hr>
@@ -48,7 +48,7 @@
 
         <div class="card">
             <p>Master</p>
-            <span class="card-price">$39.99</span>
+            <span class="card-price" id="masterDisplay">$39.99</span>
             <hr>
             <p>2 TB Storage</p>
             <hr>
@@ -56,10 +56,12 @@
             <hr>
             <p>Send up to 20 GB</p>
             <hr>
+            
             <button class="btn-main">learn more</button>
         </div>
 
     </main>
 
 </body>
+<script src="./index.js"></script>
 </html>

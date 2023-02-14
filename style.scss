@@ -16,6 +16,10 @@ $white: #fff;
     font-family: $ff-main;
     font-weight: 700;
     letter-spacing: 2px;
+
+    &:hover{
+        cursor: pointer;
+    }
 }
 *{
     box-sizing: border-box;
@@ -54,7 +58,7 @@ input{
         width: 26px; 
         height: 26px;
         background-color: transparent;
-       
+
         }
 
         &:checked{
@@ -108,8 +112,8 @@ main{
     }
 
     .card{
-        min-height: 453px;
-        max-width: 350px;
+        height: 453px;
+        width: 350px;
         background: $white;
         padding: 2em;
         border-radius: 30px;
@@ -117,7 +121,7 @@ main{
         font-weight: 700;
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        gap:1.3em;
         
         .card-price{
             font-size: 4.8rem;
@@ -128,6 +132,12 @@ main{
             background: linear-gradient(to bottom right, $grayishBlue ,$darkGrayishBlue);
             color: $white;
 
+            &:hover{
+                background: $white;
+                color: $darkGrayishBlue;
+                border: 1px solid $darkGrayishBlue;
+            }
+
         }   
     }
 
@@ -137,13 +147,20 @@ main{
 
         @media (min-width:957px) {
             height: 501px;
+            gap:1.51em;
             
         }
-
+        
         .btn-sec{
             @include btn();
             background: $white;
             color: $darkGrayishBlue;
+
+            &:hover{
+                background: transparent;
+                color: $white;
+                border: 1px solid $white;
+            }
         }
     }
 }
